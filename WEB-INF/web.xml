@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Name: Michael Gilday
+    Course: CNT 4714 – Fall 2023 – Project Four
+    Assignment title: A Three-Tier Distributed Web-Based Application
+    Date: December 5, 2023 -->
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+    <!-- general description of your Web application-->
+    <display-name>CNT 4714 Fall 2023 Project 4</display-name>
+    <description>This is the Web application in which we will demonstrate our first servlet example.</description>
+
+    <!-- Servlet definitions -->
+
+    <!-- Accountant RPC Servlet -->
+    <servlet>
+        <description>Servlet for Accountant-level users to execute RPCs</description>
+        <servlet-name>accountantRPC</servlet-name>
+        <servlet-class>AccountantRPCServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>accountantRPC</servlet-name>
+        <url-pattern>/accountant-rpc</url-pattern>
+    </servlet-mapping>
+
+    <!-- Add Job Record Servlet -->
+    <servlet>
+        <description>Servlet for adding job records</description>
+        <servlet-name>addJobRecord</servlet-name>
+        <servlet-class>AddJobRecordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addJobRecord</servlet-name>
+        <url-pattern>/add-job-record</url-pattern>
+    </servlet-mapping>
+
+    <!-- Add Part Record Servlet -->
+    <servlet>
+        <description>Servlet for adding part records</description>
+        <servlet-name>addPartRecord</servlet-name>
+        <servlet-class>AddPartRecordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addPartRecord</servlet-name>
+        <url-pattern>/add-part-record</url-pattern>
+    </servlet-mapping>
+
+    <!-- Add Shipment Record Servlet -->
+    <servlet>
+        <description>Servlet for adding shipment records</description>
+        <servlet-name>addShipmentRecord</servlet-name>
+        <servlet-class>AddShipmentRecordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addShipmentRecord</servlet-name>
+        <url-pattern>/add-shipment-record</url-pattern>
+    </servlet-mapping>
+
+    <!-- Add Supplier Record Servlet -->
+    <servlet>
+        <description>Servlet for adding supplier records</description>
+        <servlet-name>addSupplierRecord</servlet-name>
+        <servlet-class>AddSupplierRecordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addSupplierRecord</servlet-name>
+        <url-pattern>/add-supplier-record</url-pattern>
+    </servlet-mapping>
+
+    <!-- Authentication Servlet -->
+    <servlet>
+        <description>Servlet for user authentication</description>
+        <servlet-name>authentication</servlet-name>
+        <servlet-class>AuthentificationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>authentication</servlet-name>
+        <url-pattern>/authentication</url-pattern>
+    </servlet-mapping>
+
+    <!-- Client User Servlet -->
+    <servlet>
+        <description>Servlet for client-level users</description>
+        <servlet-name>clientUser</servlet-name>
+        <servlet-class>ClientUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>clientUser</servlet-name>
+        <url-pattern>/client-user</url-pattern>
+    </servlet-mapping>
+
+    <!-- Root User Servlet -->
+    <servlet>
+        <description>Servlet for root-level users</description>
+        <servlet-name>rootUser</servlet-name>
+        <servlet-class>RootUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>rootUser</servlet-name>
+        <url-pattern>/root-user</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Establishing the Welcome page. -->
+    <welcome-file-list>
+        <welcome-file>authentication.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>

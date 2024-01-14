@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<!-- Name: Michael Gilday
+    Course: CNT 4714 – Fall 2023 – Project Four
+    Assignment title: A Three-Tier Distributed Web-Based Application
+    Date: December 5, 2023 -->
+<html lang="en">
+<head>
+    <title><strong>Fall 2023 - Project 4 Enterprise System</strong></title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        body {
+            background-color: black;
+            text-align: center;
+            font-family: Calibri, Arial, sans-serif;
+        }
+
+        #header {
+            color: yellow;
+            padding: 10px;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+        #description {
+            color: green;
+            padding: 10px;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+        #authentication {
+            color: red;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+        #divider {
+            border-bottom: 2px solid grey;
+            margin: 20px 0;
+        }
+
+        #formContainer {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: x-large;
+            font-weight: bold;
+            color: yellow;
+        }
+
+        input {
+            font-size: large;
+            border: 1px black solid;
+            box-shadow: 5px 5px 5px 2px black;
+            margin-bottom: 10px;
+            background-color: #D2FFD2;
+        }
+
+        #authenticateButton {
+            background-color: green;
+            color: yellow;
+            padding: 10px;
+            font-size: large;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+        }
+
+        #buttonDivider {
+            border-bottom: 2px solid grey;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <strong>Welcome to the Fall 2023 Project 4 Enterprise System</strong>
+    </div>
+    <div id="description">
+        <strong>A Servlet/JSP-based Multi-tiered Enterprise Application Using a Tomcat Container</strong>
+    </div>
+    <div id="authentication">
+        <strong>- User Authentication Page -</strong>
+    </div>
+    <div id="divider"></div>
+    <div id="formContainer">
+        <form action="/Project-4/authentication" method="post">
+            <label for="username"><strong>UserName</strong></label>
+            <input type="text" id="username" name="username" required />
+            <br>
+            <label for="password"><strong>Password</strong></label>
+            <input type="password" id="password" name="password" required />
+            <br>
+            <button type="submit" id="authenticateButton"><strong>Click to Authenticate</strong></button>
+        </form>
+    </div>
+    <div id="buttonDivider"></div>
+</body>
+</html>
